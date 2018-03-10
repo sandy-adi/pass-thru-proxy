@@ -9,12 +9,13 @@ const server = http.createServer((req, res) => {
     superagent.get(`${BIN_URL}${req.url}`)
         .then((binResponse) => {
             res.statusCode = binResponse.statusCode;
-            res.setHeader('x-served-by', BIN_URL);
+            res.setHeader('X-SERVED-BY', BIN_URL);
             res.end(JSON.stringify(binResponse.body));
         })
         .catch((error) => {
             console.log(error && error.stack);
             res.statusCode = 500;
+            res.setHeader('X-SERVED-BY', BIN_URL);
             res.end('No bin for you!');
         });
 });

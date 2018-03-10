@@ -15,10 +15,10 @@
   "author": "sandeep.adinarayana@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "superagent": "^3.8.2"
+    "superagent": "3.8.2"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1"
+    "babel-cli": "6.26.0",
+    "babel-preset-es2015": "6.24.1"
   }
 }
